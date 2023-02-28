@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 class="center">Thank You for Registering!</h1>
+    <button onclick="return_page()">👈Return</button>
+</body>
+<style>
+    .center{
+        display: block;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    h1{
+        color: white;
+        font-family: arial;
+    }
+
+    button{
+        height: 50px;
+        width: 250px;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+    }
+
+    body{
+        background-color: deepskyblue;
+    }
+</style>
+<script>
+    function return_page() {
+        window.open('/register')
+    }
+</script>
+</html>

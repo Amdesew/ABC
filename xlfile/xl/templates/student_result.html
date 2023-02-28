@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Abc{% endblock %}</title>
+</head>
+<body>
+
+    {% block content %}
+
+    <br><br><br>
+    <br><br>
+        <div class="box center">
+            <br><br>
+            <form>
+                <h2>Student Result</h2>
+
+                <br>
+                <h3>Enter Your Id:</h3>
+                
+                <input placeholder="ex: 012345" id="name" name="q">
+
+                <br><br>
+                <button type="submit" onclick="submit()">Show</button>
+            </form>
+
+            <br><br
+
+            <div class="result" style="overflow-x:auto;">
+                {% for student in students %}
+                    <table>
+                        <!--<tr>
+                            <th>Student Name</th>
+                            <th>Student Id</th>
+                            <th>Gender</th>
+                            <th>Amharic</th>
+                            <th>Maths</th>
+                            <th>General Science</th>
+                            <th>Geography</th>
+                            <th>Civics</th>
+                            <th>Hpe</th>
+                            <th>ART</th>
+                            <th>Total</th>
+                            <th>Average</th>
+                            <th>Rank</th>
+                            <th>Labratoury Test</th>
+                        </tr>
+                        <tr>
+                            <td>{{ student.ተማሪው_ዋ_ስም }}</td>
+                            <td>{{ student.ተ_ቁ }}</td>
+                            <td>{{ student.ፆታ }}</td>
+                            <td>{{ student.አማርኛ }}</td>
+                            <td>{{ student.Maths }}</td>
+                            <td>{{ student.G_science }}</td>
+                            <td>{{ student.ህ_ሰብ }}</td>
+                            <td>{{ student.ዜግነት }}</td>
+                            <td>{{ student.ጤናና_ሰ_ማጎ }}</td>
+                            <td>{{ student.ሥነጥበባት }}</td>
+                            <td>{{ student.ድምር }}</td>
+                            <td>{{ student.አማካይ }}</td>
+                            <td>{{ student.ደረጃ }}</td>
+                            <td>{{ student.ምርመራ }}</td>
+
+                        </tr>-->
+
+                          <tr>
+                            <th>Student Name</th>
+                            <td>{{ student.ተማሪው_ዋ_ስም }}</td>
+                          </tr>
+                          <tr>
+                            <th>Student Id</th>
+                            <td>{{ student.ተ_ቁ }}</td>
+                          </tr>
+                          <tr>
+                            <th>Gender</th>
+                            <td>{{ student.ፆታ }}</td>
+                          </tr>
+                          <tr>
+                            <th>Amharic</th>
+                            <td>{{ student.አማርኛ }}</td>
+                          </tr>
+                          <tr>
+                            <th>Maths</th>
+                            <td>{{ student.Maths }}</td>
+                          </tr>
+                          <tr>
+                            <th>General Science</th>
+                            <td>{{ student.G_science }}</td>
+                          </tr>
+                          <tr>
+                            <th>Geography</th>
+                            <td>{{ student.ህ_ሰብ }}</td>
+                          </tr>
+                          <tr>
+                            <th>Civics</th>
+                            <td>{{ student.ዜግነት }}</td>
+                          </tr>
+                          <tr>
+                            <th>Hpe</th>
+                            <td>{{ student.ጤናና_ሰ_ማጎ }}</td>
+                          </tr>
+                          <tr>
+                            <th>ART</th>
+                            <td>{{ student.ሥነጥበባት }}</td>
+                          </tr>
+                          <tr>
+                            <th>Total</th>
+                            <td>{{ student.ድምር }}</td>
+                          </tr>
+                          <tr>
+                            <th>Average</th>
+                            <td>{{ student.አማካይ }}</td>
+                          </tr>
+                          <tr>
+                            <th>Rank</th>
+                            <td>{{ student.ደረጃ }}</td>
+                          </tr>
+                          <tr>
+                            <th>Labratoury Test</th>
+                            <td>{{ student.ምርመራ }}</td>
+                          </tr>
+                    </table>
+                    <!--<h4>{{student.name}} {{student.no}}</h4>
+                    <h5>Test One Result</h5>
+                    <h4 class="result">{{student.test_subjects}}</h4>
+                    <h5>Test Two Result</h5>
+                    <h4 class="result">{{student.test_two}}</h4>
+                    <h5>Mid Result</h5>
+                    <h4 class="result">{{student.mid_exam}}</h4>
+                    <h5>Test Three Result</h5>
+                    <h4 class="result">{{student.test_three}}</h4>
+                    <h5>Final Result</h5>
+                    <h4 class="result">{{student.final_exam}}</h4>-->
+                {% endfor %}
+            </div>  
+        </div>
+
+        <style>
+            .center{
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+
+            .box{
+                width: 615px;
+                height: 700px;
+                margin-top: -90px;
+                border-radius: 15px;
+                animation-name: appear;
+                animation-duration: 3s;
+                border: solid 5px white;
+                box-shadow: 7px 7px skyblue;
+                background-color: rgba(255, 209, 123, 0.878);
+            }
+
+            body{
+                background-color: deepskyblue;
+            }
+
+            h2{
+                margin: 0;
+                color: gray;
+                font-size: 30px;
+                margin-left: -235;
+                font-family: arial;
+            }
+
+            h2:hover{
+                color: DodgerBlue;
+            }
+
+            input{
+                width: 320px;
+                height: 35px;
+                opacity: 40%;
+                margin-left: -20;
+                border-radius: 20px;
+                border-color: lightgray;
+                animation-name: appear;
+            }
+
+            input:hover{
+                opacity: 100%;
+                transition: opacity 2s ease-in 0s both;
+            }
+
+            p{
+                font-size: 13px;
+                font-family: arial;
+                margin-right: -185;
+                color: dodgerblue;
+            }
+
+            button{
+                height: 40px;
+                width: 300px;
+                border-color: white;
+                border-radius: 50px;
+                box-shadow: 1px 5px lightgray;
+                background-color: DarkTurquoise;
+            }
+
+            h3{
+                color: dodgerblue;
+                font-family: arial;
+                text-shadow: 0px 1px;
+            }
+
+            h4{
+                color: dodgerblue;
+                font-family: arial;
+            }
+
+            h5{
+                color: dodgerblue;
+                font-family: arial;
+            }
+
+            table, th, td {
+                width: 600px;
+                border: 1px solid;
+            }
+
+            @keyframes appear{
+                from {opacity: 0%;}
+                to {opacity: 100%;}
+            }
+        </style>
+
+
+
+
+
+
+
+        <script>
+
+
+
+
+            
+        </script>
+    {% endblock %}
+    
+</body>
+</html>

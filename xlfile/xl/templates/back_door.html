@@ -1,0 +1,132 @@
+<html>
+<head>
+	<link rel="stylesheet" href="test.css">
+	<script src="test.js"></script>
+</head>
+<body>
+
+	<br><br><br><br>
+	<div class="box center">
+		<br><br>
+	    <h2><a href="#">SMS📲</a></h2>
+		<h2><a href="/email">Email📧</a></h2>
+        
+		<br><br><br>
+		<input placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Email" id="name">
+
+		<br><br>
+		<input placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Password"
+		 type="Password" id="password">
+
+		 <p>Forget Password</p>
+
+		 <br>
+		 <button onclick="submit()">Sign In</button>
+
+		 <br><br><br>
+		 <label>Privacy Policy</label>
+	</div>
+
+    <style>
+        .center{
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+
+        .box{
+            width: 370px;
+            height: 520px;
+            border-radius: 15px;
+            box-shadow: 7px 7px skyblue;
+            border: solid 5px white;
+            background-color: white;
+        }
+
+        body{
+            background-color: deepskyblue;
+        }
+
+        h2{
+            margin: 0;
+            color: gray;
+            font-size: 30px;
+            margin-left: -235;
+            font-family: arial;
+        }
+
+        h2:hover{
+            color: DodgerBlue;
+        }
+
+        a{
+            color: gray;
+            font-size: 27px;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: aqua;
+        }
+
+        input{
+            width: 320px;
+            height: 35px;
+            opacity: 40%;
+            margin-left: -20;
+            border-radius: 20px;
+            border-color: lightgray;
+            animation-name: appear;
+        }
+
+        input:hover{
+            opacity: 100%;
+            transition: opacity 2s ease-in 0s both;
+        }
+
+        p{
+            font-size: 13px;
+            font-family: arial;
+            margin-right: -185;
+            color: dodgerblue;
+        }
+
+        button{
+            height: 40px;
+            width: 300px;
+            border-color: white;
+            border-radius: 50px;
+            box-shadow: 1px 5px lightgray;
+            background-color: DarkTurquoise;
+        }
+
+        label{
+            color: dodgerblue;
+            font-family: arial;
+            text-shadow: 0px 1px;
+        }
+    </style>
+
+    <script>
+        function submit(){
+            name = document.getElementById('name');
+            password = document.getElementById('password');
+
+            if (name.value == "AGS_Admin" || password.value == "ags@school_6797"){
+                window.alert('Administer Database Activated')
+                window.location = "/admin";
+            }
+
+            else if(name.value == "" || password.value == ""){
+                window.alert("Fill In Before You Sign In")
+            }
+
+            else{
+                window.alert('Administer Database Disactivated');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

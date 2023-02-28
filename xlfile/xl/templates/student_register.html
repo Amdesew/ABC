@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% block content %}
+
+    <br><br><br>
+    <br><br>
+
+        <form class="box center" method="POST">
+            {% csrf_token %}
+            <br><br>
+            <h2>Register</h2>
+
+            <br><br><br>
+            <input placeholder="Full Name(ex:John Alex)" name="name">
+
+            <br><br>
+            <input placeholder="Wanted Class(ex:10th)" name="wanted_class">
+
+            <br><br>
+            <input placeholder="Phone No:(ex:09123456)" name="phone_no">
+
+            <br><br><br>
+            <button type="submit" onclick="submit()">Register</button>
+
+            
+        </form>
+
+        <style>
+            .center{
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+
+            .box{
+                width: 370px;
+                height: 480px;
+                margin-top: -90px;
+                border-radius: 15px;
+                animation-name: appear;
+                animation-duration: 3s;
+                border: solid 5px white;
+                background-color: rgba(255, 209, 123, 0.878);
+                box-shadow: 7px 7px skyblue;
+            }
+
+            body{
+                background-color: deepskyblue;
+            }
+
+            h2{
+                margin: 0;
+                color: gray;
+                font-size: 30px;
+                margin-left: -235;
+                font-family: arial;
+            }
+
+            h2:hover{
+                color: DodgerBlue;
+            }
+
+            input{
+                width: 320px;
+                height: 35px;
+                opacity: 40%;
+                margin-left: -20;
+                border-radius: 20px;
+                border-color: lightgray;
+                animation-name: appear;
+            }
+
+            input:hover{
+                opacity: 100%;
+                transition: opacity 2s ease-in 0s both;
+            }
+
+            p{
+                font-size: 13px;
+                font-family: arial;
+                margin-right: -185;
+                color: dodgerblue;
+            }
+
+            button{
+                height: 40px;
+                width: 300px;
+                border-color: white;
+                border-radius: 50px;
+                box-shadow: 1px 5px lightgray;
+                background-color: DarkTurquoise;
+            }
+
+            label{
+                color: dodgerblue;
+                font-family: arial;
+                text-shadow: 0px 1px;
+            }
+
+            @keyframes appear{
+                from {opacity: 0%;}
+                to {opacity: 100%;}
+            }
+        </style>
+
+    {% endblock %}
+    
+</body>
+</html>

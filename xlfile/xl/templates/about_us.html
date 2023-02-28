@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% block content %}
+
+    <br><br><br>
+    <br><br>
+
+            
+        <div class="box center">
+            <br><br>
+            <h2>About The Developer</h2>
+
+            <h3>Hi There👋My name is amdesew and here's a little about me i am a computer programmer💻
+                who have coded day☀️ and night🌒 for past year i don't code just for money🤑
+                or fame i do coding for resting my mind or for entertaining the only thing
+                in this world which accepts you with the open hand whether you are rich or
+                poor, ugly or beautifull, black or white or whatever you are coding accepts
+                you with the open hand. i have been raised to be a successfull businessman
+                to manage my bussiness using the latest AI that are existed. 
+            </h3>
+
+            <br><br>
+
+            <div class="icons center">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="/back@_door">
+                    <i class="fa-solid fa-user-shield"></i>
+                </a>
+            </div>
+
+            
+        </div>
+
+        <style>
+            .center{
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+
+            .box{
+                width: 370px;
+                height: 480px;
+                margin-top: -90px;
+                border-radius: 15px;
+                animation-duration: 3s;
+                animation-name: appear;
+                border: solid 5px white;
+                box-shadow: 7px 7px skyblue;
+                background-color: rgba(255, 209, 123, 0.878);
+            }
+
+            body{
+                background-color: deepskyblue;
+            }
+
+            h2{
+                margin: 0;
+                color: gray;
+                font-size: 30px;
+                margin-left: -235;
+                font-family: arial;
+            }
+
+            h2:hover{
+                color: DodgerBlue;
+            }
+
+            h3{
+                color: gray;
+                font-size: 17px;
+                font-family: arial;
+                letter-spacing: 0.5px;
+            }
+
+            h3:hover{
+                color: dodgerblue;
+            }
+
+            a{
+                color: black;
+                font-size: 30px;
+                padding: 8px;
+                text-decoration: none;
+            }
+
+            a:hover{
+                color: dodgerblue;
+            }
+
+            @keyframes appear{
+                from {opacity: 0%;}
+                to {opacity: 100%;}
+            }
+
+        </style>
+
+
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notefication</title>
+</head>
+<body>
+
+    <div class="center box">
+        <br>
+        <form>
+            {% csrf_token %} 
+            <h1>Message!</h1>
+            <p>Head</p>
+            <input name="head">
+            <p>to:</p>
+            <input name="reciever">
+            <p>message:</p>
+            <textarea id="test1" name="body"></textarea>
+            <br><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <style>
+        .center{
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+
+        .box{
+            width: 350px;
+            height: 430px;
+            margin-top: 10px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 2px 2px 6px 6px aqua;
+        }
+
+        h1{
+            color: deepskyblue;
+            font-family: arial;
+        }
+
+        button{
+            width: 120px;
+            height: 45px;
+            border-radius: 30px;
+            background-color: aqua;
+        }
+
+        body{
+            background: deepskyblue;
+        }
+    </style>
+    
+</body>
+</html>

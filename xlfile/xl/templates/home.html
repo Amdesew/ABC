@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d0c269e5b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% block content %}
+
+        <br><br><br><br>
+        <br>
+
+        <div class="box center">              
+            
+            <!--<img src="a.gif">-->
+
+            <br><br><br><br>
+            <p>
+                <b><h2>ኤቢሲ አካዳሚ</h2></b>
+                <a href="https://hamernoah.wordpress.com/2015/06/30/%e1%89%a5%e1%8c%b9%e1%8b%95-%e1%8a%a0%e1%89%a1%e1%8a%90-%e1%8c%8e%e1%88%ad%e1%8c%8e%e1%88%aa%e1%8b%8e%e1%88%b5-%e1%8a%ab%e1%88%8d%e1%8b%95/">
+                    
+                </a>
+            </p>
+
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br>
+        </div>
+
+        <ul class="box_center center">
+            <h2>What Can You Expect From Us?<i class="fa-sharp fa-solid fa-comment-question"></i></h2>
+
+            <li class="element_1">
+                <img src="https://cdn-icons-png.flaticon.com/512/1903/1903162.png">
+                <h3> Great Knowledge</h3>
+            </li>
+
+            <li class="element_2">
+                <img src="https://cdn-icons-png.flaticon.com/512/2799/2799142.png">
+                <h3>Talented Students</h3>
+            </li>
+
+            <li class="element_3">
+                <img src="https://cdn-icons-png.flaticon.com/512/6746/6746962.png">
+                <h3>High Accomplishemnt</h3>
+            </li>
+        </ul>
+        
+        
+        <style>
+            .center{
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+
+            .box img{
+                height: 500px;
+                float: left;
+                margin-top: -100px;
+                margin-left: 20px;
+                border-radius: 20px;
+                animation-name: get_inside;
+                animation-duration: 10s;
+                box-shadow: 5px 5px 5px 5px white;
+            }
+
+            .box p{
+                font-size: 20px;
+                margin-top: -50px;
+                font-family: arial;
+                animation-name: appear;
+                animation-duration: 10s;
+            }
+
+            .box p:hover{
+                opacity: 70%;
+                color: white;
+            }
+
+            .box_center{
+                opacity: 80%;
+                animation-name: come;
+                animation-duration: 5s;
+            }
+
+            .box_center:hover{
+                opacity: 100%;
+            }
+
+            .box_center h2{
+                font-size: 30px;
+                font-family: arial;
+            }
+
+            .box_center img{
+                height: 100px;
+                width: 100px;
+            }
+
+            ul{
+               list-style-type: none; 
+            }
+
+            @keyframes appear {
+                from {opacity: 0%;}
+                to {opacity: 100;}
+            }
+
+            @keyframes get_inside{
+                from {margin-left: -500px;}
+                to {margin-left: 20px;}
+            }
+
+            @keyframes come{
+                from {margin-top: -500px;}
+                to {margin-top: 400px;}
+            }
+
+            @media only screen and (min-width: 1450px){
+                ul{
+                  list-style-type: none;  
+                }
+
+                li{
+                    float: left;
+                }
+
+                .element_2{
+                    margin-left: 420px;
+                }
+
+                .element_3{
+                    margin-left: 270px;
+                }
+            }
+
+           
+
+        </style>
+
+    {% endblock %}   
+</body>
+</html>
